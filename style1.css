@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
 
     font-size: large;
@@ -38,11 +43,20 @@ h2 {
 .ad1 {
     text-align: justify;
     width: 100%;
-    padding: 50px 50px;
+    height: 375px;
+    padding: 20px 50px;
     font-size: x-large;
     background-color: beige;
     margin-top: 10px;
 
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ad1 {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
 
 .ad2 {
@@ -53,19 +67,26 @@ h2 {
     padding: 20px 50px;
     background-color: rgba(127, 255, 212, 0.103);
     text-align: center;
-    background-image: url(22.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
 
 }
 
 .top-picks {
+
     background-color: rgba(10, 163, 155, 0.089);
     text-align: center;
     font-size: 20pt;
     margin-top: 20px;
     margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
 
+
+.top-picks>img {
+
+    height: 100%;
+    width: 20px;
+    object-fit: contain;
 }
 
 .top-brands {
@@ -87,47 +108,21 @@ h2 {
     text-align: center;
     font-style: bold;
     font-size: 25px;
-    overflow-x: hidden;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1025px) and (max-width: 1600px) {
+
     .thumbnail {
-        font-size: 15px;
-
+        font-size: 20px;
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .thumbnail {
-        font-size: 25px;
-        margin: 0px 20px 0px 20px;
-        overflow-x: wrap;
-    }
+.thumbnail>img {
 
-    .img {
-        margin: 0px 20px;
-    }
+    height: 100% !important;
+    width: 100% !important;
+
 }
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .thumbnail {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-    .thumbnail {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1281px) {
-    .thumbnail {
-        font-size: 25px;
-    }
-}
-
 
 .dropdown-toggle {
     color: white;

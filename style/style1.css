@@ -40,7 +40,21 @@ h2 {
 
 }
 
+/* .ad1 {
+    display: -webkit-box;
+    height: 375px;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    font-size: x-large;
+    background-color: beige;
+    margin-top: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+} */
+
 .ad1 {
+
     text-align: justify;
     width: 100%;
     height: 375px;
@@ -48,26 +62,33 @@ h2 {
     font-size: x-large;
     background-color: beige;
     margin-top: 10px;
+    overflow: hidden;
+    position: relative;
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
     .ad1 {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
     }
-}
+} */
 
 .ad2 {
 
     margin-top: 10px;
     width: 100%;
     height: 375px;
-    padding: 20px 50px;
     background-color: rgba(127, 255, 212, 0.103);
-    text-align: center;
 
+}
+
+.ad2>img {
+
+    height: 375px;
+    width: 100%;
+    object-fit: fill;
 }
 
 .top-picks {
@@ -84,10 +105,22 @@ h2 {
 
 .top-picks>img {
 
-    height: 100%;
-    width: 20px;
+    height: 200px;
+    width: 100px;
     object-fit: contain;
+    display: block;
 }
+
+/* @media (min-width: 1200px) and (max-width: 1600px) {
+    .top-picks>img {
+
+        height: 180px;
+        width: 100px;
+        object-fit: contain;
+        display: block;
+    }
+
+} */
 
 .top-brands {
     background-color: rgba(0, 255, 255, 0.199);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .block-with-text {
+            /* hide text if it more than N lines */
+            overflow: hidden;
+            /* for set '...' in absolute position */
+            position: relative;
+            /* use this value to count block height */
+            line-height: 1.2em;
+            /* max-height = line-height (1.2) * lines max number (3) */
+            max-height: 23.438em;
+            /* fix problem when last visible word doesn't adjoin right side */
+            text-align: justify;
+            /* place for '...' */
+            margin-right: -1em;
+            padding-right: 1em;
+        }
+
+        /* create the ... */
+        .block-with-text:before {
+            /* points in the end */
+            content: '...';
+            /* absolute position */
+            position: absolute;
+            /* set position to right bottom corner of block */
+            right: 0;
+            bottom: 0;
+        }
+
+        /* hide ... if we have text, which is less than or equal to max lines */
+        .block-with-text:after {
+            /* points in the end */
+            content: '';
+            /* absolute position */
+            position: absolute;
+            /* set position to right bottom corner of text */
+            right: 0;
+            /* set width and height */
+            width: 1em;
+            height: 1em;
+            margin-top: 0.2em;
+            /* bg color = bg color under block */
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="block-with-text">
+        Google ads give you control over your advertising budget. Set a monthly budget cap, and never go
+        over it.Plus,you can pause or adjust your spend anytime.Google ads give you control over your
+        advertising budget. Set a monthly budget cap, and never go over it. Plus, you can pause or adjust
+        your spend anytime.Google ads give you control over your advertising budget. Set a monthly budget
+        cap, and never go over it. Plus, you can pause or adjust your spend anytime.Google ads give you
+        control over your advertising budget. Set a monthly budget cap.
+    </p>
+</body>
+
+</html>
